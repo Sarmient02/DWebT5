@@ -16,27 +16,22 @@ function calcularEdad() {
     $('#edad').val(edad);
 }
 
-
-
-
 function mostrar(variable){
 	$("#"+variable).css("display", "block");
-	//$("#"+variable+" input").prop('required',true);
+	$("#"+variable+" input").prop('checked', false);
 	$( "#"+variable+" input" ).rules( "add", {required: true});
-	//$("#"+variable+" textarea").prop('required',true);
 	$( "#"+variable+" textarea" ).rules( "add", {required: true});
 }
 
 function esconder(variable){
 	$("#"+variable).css("display", "none");
-	//$("#"+variable+" input").prop('required',false);
+	$("#cuales").css("display", "none");
 	$("#"+variable+" textarea").rules( "remove" , "required");
-	//$("#"+variable+" textarea").prop('required',false);
 	$("#"+variable+" textarea").rules( "remove" , "required");
 }
 
 $(document).ready(function(){
-	
+
 	$("#formulario").validate({
 		errorClass: "ayuda is-danger",
 		errorPlacement: function(error, element) {
@@ -56,7 +51,6 @@ $(document).ready(function(){
 			}
             
         },
-
 
 		rules:{
 			nombre:{
@@ -126,5 +120,14 @@ $(document).ready(function(){
 			}
 		}
 
-	})
+	});
+
+	$("#btnSubmit").click(function(){
+		if($("#formulario").valid()){
+			$("#formulario").trigger("reset");
+			location.reload();
+			alert("Usuario registrado!");
+		}
+    });
+
 });
