@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, i2nitial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v6.1.2/js/all.js"></script>
+    <link rel="stylesheet" href="css/registro.css">
+  </head>
+  <body>
+    
+    <section class="hero is-fullheight">
+      <div class="hero-head ">
+        <header class="navbar is-fixed-top">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="https://uis.edu.co/inicio/">
+                <img src="http://tangara.uis.edu.co/biblioweb/portalVirtual_tmp/UIS-logo1.png" alt="Logo">
+              </a>
+              <span class="navbar-burger" data-target="navbarMenuHeroC">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroC" class="navbar-menu">
+              <div class="navbar-end">
+                <a class="navbar-item is-active" href="/index.html">
+                  Inicio
+                </a>
+                <a class="navbar-item">
+                  Grilla
+                </a>
+                <span class="navbar-item">
+                  <a class="button is-success is-inverted">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Registrarse</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="hero-body has-text-centered">
+        <div class="container">
+            <div class="columns is-centered">
+                <form class="column box is-5"  id="formulario" method="get" action="resultado.html" onkeydown="return event.key != 'Enter';">
+                  <section class="hero is-success" style="border-radius: 5px; margin-bottom: 15px;">
+                    <div class="hero-body">
+                      <div class="container has-text-centered">
+                        <p class="title">
+                          Registro de Usuarios
+                        </p>
+                      </div>
+                    </div>
+                  </section>
+                  <div class="columns" style="margin-bottom: 0px;">
+                    <div class="field column is-marginless">
+                      <p class="control has-icons-left">
+                        <input id="nombre" name="nombre" class="input" type="text" placeholder="Nombre">
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-user-tie"></i>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="field column is-marginless">
+                      <p class="control has-icons-right">
+                        <input id="apellido" name="apellido" class="input" type="text" placeholder="Apellido">
+                        <span class="icon is-small is-right">
+                          <i class="fas fa-user-tie"></i>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="columns" style="margin-bottom: 0px;">
+                    <div class="field column is-marginless">
+                      <p class="control">
+                        <input id="fecha" name="fecha" class="input" type="date">
+                      </p>
+                    </div>
+                    <div class="field column is-marginless">
+                      <p class="control has-icons-right">
+                        <input id="edad" name="edad" class="input" type="text" placeholder="Edad" readonly>
+                        <span class="icon is-small is-right">
+                          <i class="fas fa-cake-candles"></i>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <p class="control has-icons-right">
+                      <input id="email" name="email" class="input" type="email" placeholder="Email">
+                      <span class="icon is-small is-right">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control has-icons-right">
+                      <input id="username" name="username" class="input" type="text" placeholder="Usuario">
+                      <span class="icon is-small is-right">
+                        <i class="fas fa-user-astronaut"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="columns" style="margin-bottom: 0px;">
+                    <div class="field column is-marginless">
+                      <p class="control has-icons-right">
+                        <input id="password" name="password" class="input" type="password" placeholder="Contraseña">
+                        <span class="icon is-small is-right">
+                          <i class="fas fa-key"></i>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="field column is-marginless">
+                      <p class="control has-icons-right">
+                        <input id="cpassword" name="cpassword" class="input" type="password" placeholder="Confirmar Contraseña">
+                        <span class="icon is-small is-right">
+                          <i class="fas fa-key"></i>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <p>¿Ha sufrido de alguna enfermadad?</p>
+                    <div class="control" id="qq1">
+                      <label class="radio">
+                        <input type="radio" name="q1" onchange="mostrar('contagiosas')">
+                        Sí
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="q1" onchange="esconder('contagiosas')">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                  <div class="field" style="display: none;" id="contagiosas">
+                    <p>¿Ha sufrido de alguna enfermadad contagiosa?</p>
+                    <div class="control" id="qq2">
+                      <label class="radio">
+                        <input type="radio" name="q2" onchange="mostrar('cuales')">
+                        Sí
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="q2" onchange="esconder('cuales')">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                  <div class="field" style="display: none;" id="cuales">
+                    <div class="control">
+                      <label class="label">¿Cuáles?</label>
+                      <div class="control">
+                        <textarea class="textarea has-fixed-size" placeholder="Escriba aquí las enfemedades" id="textar" name="textar"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field" id="confirm">
+                    <div class="control">
+                      <button class="button is-success" type="submit">Registrar</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
