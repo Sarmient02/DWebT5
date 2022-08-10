@@ -30,13 +30,13 @@
                 <a class="navbar-item is-active" href="/index.html">
                   Inicio
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" href="/grilla.html">
                   Grilla
                 </a>
                 <span class="navbar-item">
-                  <a class="button is-success is-inverted">
+                  <a class="button is-success is-inverted" href="/registro.html">
                     <span class="icon">
-                      <i class="fab fa-github"></i>
+                      <i class="fas fa-user-plus"></i>
                     </span>
                     <span>Registrarse</span>
                   </a>
@@ -49,7 +49,7 @@
       <div class="hero-body has-text-centered">
         <div class="container">
             <div class="columns is-centered">
-                <form class="column box is-5"  id="formulario" method="get" action="resultado.html" onkeydown="return event.key != 'Enter';">
+                <form class="column box is-5" id="formulario" method="post" action="" onkeydown="return event.key != 'Enter';">
                   <section class="hero is-success" style="border-radius: 5px; margin-bottom: 15px;">
                     <div class="hero-body">
                       <div class="container has-text-centered">
@@ -127,7 +127,7 @@
                     </div>
                   </div>
                   <div class="field">
-                    <p>¿Ha sufrido de alguna enfermadad?</p>
+                    <p>¿Ha sufrido de alguna enfermedad?</p>
                     <div class="control" id="qq1">
                       <label class="radio">
                         <input type="radio" name="q1" onchange="mostrar('contagiosas')">
@@ -140,7 +140,7 @@
                     </div>
                   </div>
                   <div class="field" style="display: none;" id="contagiosas">
-                    <p>¿Ha sufrido de alguna enfermadad contagiosa?</p>
+                    <p>¿Ha sufrido de alguna enfermedad contagiosa?</p>
                     <div class="control" id="qq2">
                       <label class="radio">
                         <input type="radio" name="q2" onchange="mostrar('cuales')">
@@ -154,15 +154,15 @@
                   </div>
                   <div class="field" style="display: none;" id="cuales">
                     <div class="control">
-                      <label class="label">¿Cuáles?</label>
+                      <label class="label">¿Cuál(es)?</label>
                       <div class="control">
-                        <textarea class="textarea has-fixed-size" placeholder="Escriba aquí las enfemedades" id="textar" name="textar"></textarea>
+                        <textarea class="textarea has-fixed-size" placeholder="Escriba aquí la(s) enfemedad(es)" id="textar" name="textar"></textarea>
                       </div>
                     </div>
                   </div>
                   <div class="field" id="confirm">
                     <div class="control">
-                      <button class="button is-success" type="submit">Registrar</button>
+                      <button class="button is-success" type="submit" id="btnSubmit">Registrar</button>
                     </div>
                   </div>
                 </form>
