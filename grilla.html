@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, i2nitial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v6.1.2/js/all.js"></script>
+  </head>
+  <body>
+    
+    <section class="hero is-fullheight">
+      <div class="hero-head ">
+        <header class="navbar is-fixed-top">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="https://uis.edu.co/inicio/">
+                <img src="http://tangara.uis.edu.co/biblioweb/portalVirtual_tmp/UIS-logo1.png" alt="Logo">
+              </a>
+              <span class="navbar-burger" data-target="navbarMenuHeroC">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroC" class="navbar-menu">
+              <div class="navbar-end">
+                <a class="navbar-item is-active" href="/index.html">
+                  Inicio
+                </a>
+                <a class="navbar-item" href="/grilla.html">
+                  Grilla
+                </a>
+                <span class="navbar-item">
+                  <a class="button is-success is-inverted" href="/registro.html">
+                    <span class="icon">
+                      <i class="fas fa-user-plus"></i>
+                    </span>
+                    <span>Registrarse</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="hero-body has-text-centered">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="box">
+                    <table class="table is-striped has-text-centered is-hoverable is-bordered">
+                        <thead>
+                            <tr class="">
+                                <th class="has-text-centered">
+                                <div class="columns is-vcentered">
+                                    <p class="column is-one-quarter">id</p>
+                                    <div class="column"><button class="button" id="id">
+                                        <span class="icon is-small">
+                                          <i class="fas fa-arrow-up-1-9"></i>
+                                        </span>
+                                      </button></div>
+                                </div></th>
+                                <th class="has-text-centered">
+                                    <div class="columns is-vcentered">
+                                        <p class="column">Name</p>
+                                        <div class="column is-two-fifths"><button class="button" id="name">
+                                            <span class="icon is-small">
+                                              <i class="fas fa-arrow-down-a-z"></i>
+                                            </span>
+                                          </button></div>
+                                    </div></th>
+                                    <th class="has-text-centered">
+                                        <div class="columns is-vcentered">
+                                            <p class="column">Username</p>
+                                            <div class="column is-two-fifths"><button class="button" id="username">
+                                                <span class="icon is-small">
+                                                  <i class="fas fa-arrow-down-a-z"></i>
+                                                </span>
+                                              </button></div>
+                                        </div></th>
+                                        <th class="has-text-centered">
+                                            <div class="columns is-vcentered">
+                                                <p class="column">Email</p>
+                                                <div class="column is-two-fifths"><button class="button" id="email">
+                                                    <span class="icon is-small">
+                                                      <i class="fas fa-arrow-down-a-z"></i>
+                                                    </span>
+                                                  </button></div>
+                                            </div></th>
+                                        <th class="has-text-centered">
+                                            <div class="columns is-vcentered">
+                                                <p class="column is-three-fifths">Address Street</p>
+                                                <div class="column"><button class="button" id="address">
+                                                    <span class="icon is-small">
+                                                        <i class="fas fa-arrow-down-a-z"></i>
+                                                    </span>
+                                                    </button></div>
+                                            </div>
+                                        </th>
+                                        <th class="has-text-centered">
+                                            <div class="columns is-vcentered">
+                                                <p class="column">Phone</p>
+                                                <div class="column is-two-fifths"><button class="button" id="phone">
+                                                    <span class="icon is-small">
+                                                        <i class="fas fa-arrow-down-a-z"></i>
+                                                    </span>
+                                                    </button></div>
+                                            </div>
+                                        </th>
+                                        <th class="has-text-centered">
+                                            <div class="columns is-vcentered">
+                                                <p class="column">Website</p>
+                                                <div class="column is-two-fifths"><button class="button" id="website">
+                                                    <span class="icon is-small">
+                                                        <i class="fas fa-arrow-down-a-z"></i>
+                                                    </span>
+                                                    </button></div>
+                                            </div>
+                                        </th>
+                            </tr>
+                        </thead>
+                        <tbody id="res">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/ajax.js"></script>
+  </body>
+</html>
